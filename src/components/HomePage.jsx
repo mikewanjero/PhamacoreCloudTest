@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { FileOutlined, UserOutlined } from "@ant-design/icons";
-import StepContent from "./StepContent";
-import StepNavigation from "./StepNavigation";
-import StepIndicator from "./StepIndicator";
+import StepContent from "../components/Stepper/StepContent";
+import StepNavigation from "../components/Stepper/StepNavigation";
+import StepIndicator from "../components/Stepper/StepIndicator";
 import SubscriptionForm from "./Subscription/SubscriptionForm";
 import { ToastContainer } from "react-toastify";
 import UploadForm from "./Upload/UploadForm";
