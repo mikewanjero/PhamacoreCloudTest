@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FileOutlined, UserOutlined } from "@ant-design/icons";
+import phamacoreLogo from "../assets/phamacoreLogo.png";
 import StepContent from "../components/Stepper/StepContent";
 import StepNavigation from "../components/Stepper/StepNavigation";
 import StepIndicator from "../components/Stepper/StepIndicator";
@@ -75,7 +76,7 @@ export default function HomePage() {
     <div>
       {/* Header */}
       <div>
-        <img src="https://via.placeholder.com/150" alt="logo" />
+        <img src={phamacoreLogo} alt="logo" />
         <h1>
           phAMACore<sup>™</sup>Cloud
         </h1>
