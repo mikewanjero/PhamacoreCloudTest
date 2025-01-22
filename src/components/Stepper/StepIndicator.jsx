@@ -8,7 +8,7 @@
  */
 export default function StepIndicator({ steps, current, onStepClick }) {
   return (
-    <div>
+    <div className="d-flex flex-row justify-content-between w-100 mb-4">
       {steps.map((item, index) => (
         <div
           key={index}
