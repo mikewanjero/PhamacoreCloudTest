@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FileOutlined, UserOutlined } from "@ant-design/icons";
+import { FaFileAlt, FaUser } from "react-icons/fa";
 import phamacoreLogo from "../assets/phamacoreLogo.png";
 import StepContent from "../components/Stepper/StepContent";
 import StepNavigation from "../components/Stepper/StepNavigation";
@@ -11,19 +11,19 @@ import UploadForm from "./Upload/UploadForm";
 const steps = [
   {
     title: "Upload Training Sheet",
-    icon: <FileOutlined />,
+    icon: <FaFileAlt />,
     description: "Please upload the required training document",
     component: (props) => <UploadForm {...props} />,
   },
   {
     title: "Upload Master Doc(s)",
-    icon: <FileOutlined />,
+    icon: <FaFileAlt />,
     description: "Upload the Master Document (OPTIONAL).",
     component: (props) => <UploadForm {...props} />,
   },
   {
     title: "Activate Account",
-    icon: <UserOutlined />,
+    icon: <FaUser />,
     description: "Complete the Account Activation Process.",
     component: (props) => <SubscriptionForm {...props} />,
   },
@@ -73,17 +73,20 @@ export default function HomePage() {
   };
 
   return (
-    <div>
+    <div className="welcome-container d-flex flex-column align-items-center p-6 bg-light-gray">
       {/* Header */}
-      <div>
-        <img src={phamacoreLogo} alt="logo" />
-        <h1>
+      <div className="d-flex flex-column align-items-center mb-4">
+        <img src={phamacoreLogo} alt="logo" className="w-40 h-40" />
+        <h1 className="display-5 text-caramel-caramel fw-bold">
           phAMACore<sup>™</sup>Cloud
         </h1>
       </div>
       {/* Main */}
-      <div>
-        <div>
+      <div
+        className="d-flex flex-column flex-lg-row w-100 p-4 bg-white-seashell rounded-3 shadow-lg"
+        style={{ maxWidth: "64rem" }}
+      >
+        <div className="w-100 d-flex flex-column align-items-center">
           {/* StepIndicator */}
           <StepIndicator
             steps={steps}
