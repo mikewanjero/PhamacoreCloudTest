@@ -18,11 +18,12 @@ export default function StepContent({
   const { component: StepComponent } = steps[current];
 
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center w-100">
       {/* Display description for current step*/}
-      <div>
+      <div className="text-center text-caramel-caramel mb-2">
         <p>{steps[current].description}</p>
       </div>
+
       {/* Render the component for the current step, adding necessary props */}
       {StepComponent && (
         <StepComponent formData={formData} handleChange={handleChange} />
