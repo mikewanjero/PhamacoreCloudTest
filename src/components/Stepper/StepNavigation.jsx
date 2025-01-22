@@ -18,7 +18,7 @@ export default function StepNavigation({
   onPrevious,
 }) {
   return (
-    <div>
+    <div className="d-flex justify-content-between mt-6 w-100">
       {/* Render "previous" button if not on the first step */}
       {current > 0 && (
         <button
