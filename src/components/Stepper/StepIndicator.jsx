@@ -33,7 +33,7 @@ export default function StepIndicator({ steps, current, onStepClick }) {
           ) : index < current ? (
             <i className="bi bi-check-lg"></i> // Checkmark - completed step
           ) : (
-            item.index // Default icon for upcoming step
+            item.icon // Default icon for upcoming step
           )}
           {/* Display step title */}
           <span className="text-center text-sm mt-2">{item.title}</span>
