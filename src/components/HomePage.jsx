@@ -57,6 +57,7 @@ export default function HomePage() {
   };
 
   /** Move to the next step
+   *
    * Mark the current step as completed before moving to the next step
    */
   const NextStep = () => {
