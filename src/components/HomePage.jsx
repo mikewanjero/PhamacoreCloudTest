@@ -6,6 +6,7 @@ import StepNavigation from "../components/Stepper/StepNavigation";
 import StepIndicator from "../components/Stepper/StepIndicator";
 import SubscriptionForm from "./Subscription/SubscriptionForm";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import UploadForm from "./Upload/UploadForm";
 
 const steps = [
