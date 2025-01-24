@@ -4,12 +4,25 @@ $caramel: #c58c4f;
 $caramel-light: #e2b98c;
 $caramel-dark: #9c6e3f;
 
+$white: #ffffff;
 $white-seashell: #fff9f3;
 $white-ghost: #f8f8ff;
 
 $cadet-gray: #9da5b1;
 $cadet-gray-light: #dfe2e8;
 $cadet-gray-dark: #6e7a8a;
+
+$sunflower: #ffc107;
+$sunflower-light: #ffe082;
+
+$misty-rose: #ffe4e1;
+$rosewood: #65000b;
+
+$emerald: #50c878;
+$emerald-dark: #2a7a51;
+
+$midnight-blue: #191970;
+$sky-blue-light: #87ceeb;
 
 @keyframes spin {
   0% {
@@ -22,7 +35,7 @@ $cadet-gray-dark: #6e7a8a;
 
 body {
   font-family: $font-family-sans-serif;
-  background-color: $white-seashell;
+  background-color: $white;
   color: $cadet-gray;
 }
 
@@ -36,6 +49,10 @@ body {
   &:hover {
     background-color: $caramel-dark;
   }
+}
+
+.mainSection {
+  color: $caramel;
 }
 
 .spinner {
