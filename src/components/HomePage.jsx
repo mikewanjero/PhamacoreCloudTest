@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaFileAlt, FaUser } from "react-icons/fa";
+import { BsFileEarmarkFill, BsPersonFill } from "react-icons/bs";
 import phamacoreLogo from "../assets/phamacoreLogo.png";
 import StepContent from "../components/Stepper/StepContent";
 import StepNavigation from "../components/Stepper/StepNavigation";
@@ -12,19 +12,19 @@ import UploadForm from "./Upload/UploadForm";
 const steps = [
   {
     title: "Upload Training Sheet",
-    icon: <FaFileAlt />,
+    icon: <BsFileEarmarkFill className="text-muted" />,
     description: "Please upload the required training document",
     component: (props) => <UploadForm {...props} />,
   },
   {
     title: "Upload Master Doc(s)",
-    icon: <FaFileAlt />,
+    icon: <BsFileEarmarkFill className="text-muted" />,
     description: "Upload the Master Document (OPTIONAL).",
     component: (props) => <UploadForm {...props} />,
   },
   {
     title: "Activate Account",
-    icon: <FaUser />,
+    icon: <BsPersonFill className="text-muted" />,
     description: "Complete the Account Activation Process.",
     component: (props) => <SubscriptionForm {...props} />,
   },
