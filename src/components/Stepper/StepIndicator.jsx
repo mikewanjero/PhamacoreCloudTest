@@ -28,15 +28,17 @@ export default function StepIndicator({ steps, current, onStepClick }) {
                 : "border-gray 300 bg-white text-muted" // Incomplete step
             } `}
             style={{ width: "3rem", height: "3rem", fontSize: "1.5rem" }}
-          ></div>
-          {/* Render icon based on step state */}
-          {index === current ? (
-            <BsArrowRepeat className="spinner border-sm text-dark" /> //Loading spinner - current step
-          ) : index < current ? (
-            <BsCheckLg /> // Checkmark - completed step
-          ) : (
-            item.icon // Default icon for upcoming step
-          )}
+          >
+            {/* Render icon based on step state */}
+            {index === current ? (
+              <BsArrowRepeat className="spinner border-sm text-dark" /> //Loading spinner - current step
+            ) : index < current ? (
+              <BsCheckLg /> // Checkmark - completed step
+            ) : (
+              item.icon // Default icon for upcoming step
+            )}
+          </div>
+
           {/* Display step title */}
           <span className="text-center text-sm mt-2">{item.title}</span>
         </div>
