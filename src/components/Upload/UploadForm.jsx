@@ -1,5 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
+import {
+  Button,
+  Form,
+  ListGroup,
+  Alert,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+import { BsInboxFill, BsCloudUploadFill, BsTrashFill } from "react-icons/bs";
 
 const UploadForm = ({ handleChange, fileType }) => {
   const [fileList, setFileList] = useState([]);
@@ -48,66 +58,80 @@ const UploadForm = ({ handleChange, fileType }) => {
   };
 
   return (
-    <div className="d-flex flex-column align-items-center justify-content-center w-100 max-w-md p-4 bg-white-seashell rounded-3 shadow-sm">
-      <p className="text-muted text-xs mb-2">
-        Max file size: <strong>5MB </strong> | <em>Max 3 files</em>
-      </p>
+    <Container className="bg-light p-4 rounded shadow-sm">
+      <Row className="text-center mb-3">
+        <Col>
+          <p className="text-muted small">
+            Max file size: <strong>5MB</strong> | <em>Max 3 files</em>
+          </p>
+        </Col>
+      </Row>
 
       {/* Upload Area */}
-      <div
-        className="w-100 h-28 border-dashed border-4 border-caramel-dark rounded-3 bg-white hover:bg-light-gray"
-        onDrop={handleDrop}
-        onDragOver={(e) => e.preventDefault()}
-      >
-        <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
-          <i className="bi bi-inbox-fill text-caramel-dark text-5xl mb-3" />
-          <p className="font-semibold text-caramel text-sm">
-            Click or Drag files to this area to upload
-          </p>
-          <input
-            type="file"
-            multiple
-            onChange={handleChangeFile}
-            className="opacity-0 w-100 h-100 absolute top-0 left-0 cursor-pointer"
-          />
-        </div>
-      </div>
+      <Row className="mb-4">
+        <Col>
+          <div
+            className="border border-warning rounded p-3 text-center bg-white"
+            style={{ minHeight: "150px", position: "relative" }}
+            onDrop={handleDrop}
+            onDragOver={(e) => e.preventDefault()}
+          >
+            <div className="d-flex flex-column align-items-center justify-content-center h-100">
+              <BsInboxFill size={40} className="text-warning mb-2" />
+              <p className="text-warning font-weight-bold mb-1">
+                Click or Drag files to this area to upload
+              </p>
+              <Form.Control
+                type="file"
+                multiple
+                onChange={handleChangeFile}
+                className="position-absolute top-0 start-0 w-100 h-100 opacity-0 cursor-pointer"
+              />
+            </div>
+          </div>
+        </Col>
+      </Row>
 
+      {/* Upload Status */}
       {loading && (
-        <div className="mt-4 text-green-600 text-sm">
-          <i className="bi bi-cloud-upload-fill" /> Uploading...
-        </div>
+        <Alert variant="info" className="text-center">
+          <BsCloudUploadFill className="me-2" />
+          Uploading...
+        </Alert>
       )}
 
       {uploadStatus && uploadStatus.success && (
-        <div className="mt-4 text-xs text-green-500">
+        <Alert variant="success" className="text-center">
           {uploadStatus.message}
-        </div>
+        </Alert>
       )}
 
       {/* File List */}
       {fileList.length > 0 && (
-        <div className="mt-4 w-100">
-          <h3 className="font-semibold text-caramel mb-2">Uploaded File(s)</h3>
-          <ol className="list-group list-group-flush">
-            {fileList.map((file, index) => (
-              <li
-                key={index}
-                className="list-group-item d-flex justify-content-between align-items-center bg-white p-3 rounded-3 shadow-sm hover:shadow-md"
-              >
-                <span className="text-sm text-muted truncate">{file.name}</span>
-                <button
-                  onClick={() => handleDeleteFile(file.name)}
-                  className="btn btn-sm btn-danger"
+        <Row>
+          <Col>
+            <h5 className="text-warning mb-3">Uploaded File(s)</h5>
+            <ListGroup>
+              {fileList.map((file, index) => (
+                <ListGroup.Item
+                  key={index}
+                  className="d-flex justify-content-between align-items-center"
                 >
-                  <i className="bi bi-trash-fill" />
-                </button>
-              </li>
-            ))}
-          </ol>
-        </div>
+                  <span className="text-truncate">{file.name}</span>
+                  <Button
+                    variant="danger"
+                    size="sm"
+                    onClick={() => handleDeleteFile(file.name)}
+                  >
+                    <BsTrashFill />
+                  </Button>
+                </ListGroup.Item>
+              ))}
+            </ListGroup>
+          </Col>
+        </Row>
       )}
-    </div>
+    </Container>
   );
 };
 
