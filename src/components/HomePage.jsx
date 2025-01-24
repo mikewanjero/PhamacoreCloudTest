@@ -61,12 +61,12 @@ export default function HomePage() {
    * Mark the current step as completed before moving to the next step
    */
   const NextStep = () => {
-    setStepStatus((prev) => {
-      const current = prev[stepStatus];
-      prev[current] = true;
-      return prev;
-    });
-    setCurrent((prev) => prev + 1);
+    const status = [...stepStatus];
+    status[current] = "completed";
+    setStepStatus(status);
+
+    // Delay transitioning to the next step for smoother UX.
+    setTimeout(() => setCurrent((prev) => prev + 1), 300);
   };
 
   /* Moving back to the previous step */
