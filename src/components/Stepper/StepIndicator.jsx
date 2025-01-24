@@ -1,3 +1,5 @@
+import { BsArrowRepeat, BsCheckLg } from "react-icons/bs";
+
 /* eslint-disable react/prop-types */
 
 /**
@@ -25,13 +27,13 @@ export default function StepIndicator({ steps, current, onStepClick }) {
                 ? "border-success bg-success text-white" // Completed step
                 : "border-gray 300 bg-white text-muted" // Incomplete step
             } `}
-            style={{ width: "3rem", height: "3rem" }}
+            style={{ width: "3rem", height: "3rem", fontSize: "1.5rem" }}
           ></div>
           {/* Render icon based on step state */}
           {index === current ? (
-            <i className="bi bi-arrow-repeat spinner-border-sm text-dark"></i> //Loading spinner - current step
+            <BsArrowRepeat className="spinner border-sm text-dark" /> //Loading spinner - current step
           ) : index < current ? (
-            <i className="bi bi-check-lg"></i> // Checkmark - completed step
+            <BsCheckLg /> // Checkmark - completed step
           ) : (
             item.icon // Default icon for upcoming step
           )}
