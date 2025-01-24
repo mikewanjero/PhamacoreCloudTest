@@ -79,13 +79,13 @@ export default function HomePage() {
       {/* Header */}
       <div className="d-flex flex-column align-items-center mb-4">
         <img src={phamacoreLogo} alt="logo" className="w-40 h-40" />
-        <h1 className="display-5 text-caramel-caramel fw-bold">
+        <h1 className="display-5 fw-bold" style={{ color: "$caramel" }}>
           phAMACore<sup>™</sup>Cloud
         </h1>
       </div>
       {/* Main */}
       <div
-        className="d-flex flex-column flex-lg-row w-100 p-4 bg-white-seashell rounded-3 shadow-lg"
+        className="d-flex flex-column flex-lg-row w-100 p-4 rounded-3 shadow-lg"
         style={{ maxWidth: "64rem" }}
       >
         <div className="w-100 d-flex flex-column align-items-center">
