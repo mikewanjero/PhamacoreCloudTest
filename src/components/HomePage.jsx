@@ -13,7 +13,7 @@ const steps = [
   {
     title: "Upload Training Sheet",
     icon: <BsFileEarmarkFill className="text-muted" />,
-    description: "Please upload the required training document",
+    description: "Please upload the Required Training Document.",
     component: (props) => <UploadForm {...props} />,
   },
   {
