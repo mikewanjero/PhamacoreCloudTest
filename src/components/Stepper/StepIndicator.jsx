@@ -22,7 +22,7 @@ export default function StepIndicator({ steps, current, onStepClick }) {
           <div
             className={`d-flex align-items-center justify-content-center rounded-circle border border-2 transition ${
               index === current
-                ? "border-warning bg-transparent text-dark cursor-pointer" // Active step
+                ? "border-caramel bg-transparent text-dark cursor-pointer" // Active step
                 : index < current
                 ? "border-success bg-success text-white" // Completed step
                 : "border-gray 300 bg-white text-muted" // Incomplete step
