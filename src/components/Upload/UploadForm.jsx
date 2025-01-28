@@ -71,14 +71,14 @@ const UploadForm = ({ handleChange, fileType }) => {
       <Row className="mb-4">
         <Col>
           <div
-            className="border border-warning rounded p-3 text-center bg-white"
+            className="border border-caramel rounded p-3 text-center bg-white"
             style={{ minHeight: "150px", position: "relative" }}
             onDrop={handleDrop}
             onDragOver={(e) => e.preventDefault()}
           >
             <div className="d-flex flex-column align-items-center justify-content-center h-100">
-              <BsInboxFill size={40} className="text-warning mb-2" />
-              <p className="text-warning font-weight-bold mb-1">
+              <BsInboxFill size={40} className="text-caramel mb-2" />
+              <p className="text-caramel font-weight-bold mb-1">
                 Click or Drag files to this area to upload
               </p>
               <Form.Control
