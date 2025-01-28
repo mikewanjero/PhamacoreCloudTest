@@ -22,23 +22,21 @@ export default function StepNavigation({
   console.log("Steps Length:", stepsLength);
 
   return (
-    <div className="d-flex justify-content-between mt-6 w-100">
+    <div className="d-flex justify-content-between mt-6 pt-3 w-100">
       {/* Render "previous" button if not on the first step */}
       {current > 0 && (
         <button
           type="button"
           onClick={onPrevious}
-          className="btn position-relative d-inline-flex align-items-center justify-content-center px-5 py-3 mt-2 w-auto rounded-pill shadow-sm overflow-hidden"
-          style={{ minWidth: "200px", width: "auto" }} // Added custom width constraints
-          aria-label="Previous Step" // Accessibility label
+          className="btn step-nav-button"
+          aria-label="Previous Step"
         >
-          <span className="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 text-white bg-warning translate-middle-x transition">
+          <span className="step-nav-icon">
             <svg
               className="bs bs-arrow-left"
-              width="28"
-              height="28"
+              width="24"
+              height="24"
               fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
             >
               <path
@@ -47,10 +45,7 @@ export default function StepNavigation({
               />
             </svg>
           </span>
-          <span className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 text-warning transition translate-middle fs-5">
-            Previous
-          </span>
-          <span className="invisible">Previous</span>
+          <span className="step-nav-text">Previous</span>
         </button>
       )}
       {/* Render "next" button if not on the last step */}
@@ -58,29 +53,24 @@ export default function StepNavigation({
         <button
           type="button"
           onClick={onNext}
-          className="btn position-relative d-inline-flex align-items-center justify-content-center px-5 py-3 mt-2 w-auto rounded-pill shadow-sm overflow-hidden"
-          style={{ minWidth: "200px", width: "auto" }} // Added custom width constraints
-          aria-label="Next Step" // Accessibility label
+          className="btn step-nav-button"
+          aria-label="Next Step"
         >
-          <span className="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 text-white bg-warning translate-middle-x transition">
+          <span className="step-nav-text">Next</span>
+          <span className="step-nav-icon">
             <svg
               className="bs bs-arrow-right"
-              width="28"
-              height="28"
+              width="24"
+              height="24"
               fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
             >
               <path
                 fillRule="evenodd"
-                d="M5.854 1.146a.5.5 0 0 1 0 .708L2.707 5H13.5a.5.5 0 0 1 0 1H2.707l3.147 3.146a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"
+                d="M5.854 1.146a.5.5 0 0 1 0 .708L9.293 5H0.5a.5.5 0 0 1 0 1H9.293l-3.147 3.146a.5.5 0 0 1 .708.708l4-4a.5.5 0 0 1 0-.708l-4-4a.5.5 0 0 1-.708 0z"
               />
             </svg>
           </span>
-          <span className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 text-warning transition translate-middle fs-5">
-            Next
-          </span>
-          <span className="invisible">Next</span>
         </button>
       )}
     </div>
