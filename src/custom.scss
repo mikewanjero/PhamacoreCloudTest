@@ -41,6 +41,14 @@ body {
   color: $cadet-gray;
 }
 
+.border-caramel {
+  border-color: $caramel !important;
+}
+
+.bg-caramel {
+  background-color: $caramel !important;
+}
+
 .button {
   background-color: $caramel;
   color: $white-seashell;
@@ -63,6 +71,20 @@ body {
   width: 30px;
   height: 30px;
   animation: spin 1s linear infinite;
+}
+
+// Add to custom.scss
+.step-indicator {
+  .border-caramel {
+    border-color: $caramel !important;
+  }
+  .text-caramel {
+    color: $caramel !important;
+  }
+  .spinner {
+    border-color: $caramel-light;
+    border-top-color: $caramel-dark;
+  }
 }
 
 .text-caramel {
