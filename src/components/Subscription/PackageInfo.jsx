@@ -5,7 +5,10 @@ export default function PackageInfo({ companyName, packageInfo }) {
     <>
       <div className="w-100 border p-3 rounded shadow bg-light mb-2">
         <h2 className="text-primary fw-semibold text-center">{companyName}</h2>
-        <h2 className="text-warning fw-semibold text-center">
+        <h2
+          className="text-caramel fw-semibold text-center"
+          style={{ fontSize: "1.5rem", color: "$caramel" }}
+        >
           {packageInfo.name}
         </h2>
 
