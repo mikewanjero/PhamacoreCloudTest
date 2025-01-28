@@ -105,7 +105,7 @@ export default function HomePage() {
           {/* StepNavigation */}
           <StepNavigation
             current={current}
-            stepLength={steps.length}
+            stepsLength={steps.length}
             onNext={NextStep}
             onPrevious={PreviousStep}
           />
