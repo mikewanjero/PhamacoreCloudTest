@@ -64,3 +64,59 @@ body {
   height: 30px;
   animation: spin 1s linear infinite;
 }
+
+.transition {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.05); // Slightly enlarge the button
+}
+
+.btn:hover .text-warning {
+  color: #ffcc00; // Change text color on hover
+}
+
+.btn:hover .bg-warning {
+  background-color: darken($sunflower, 10%); // Make background slightly darker
+}
+
+.btn:hover svg {
+  transform: translateX(-5px); // Move arrow left on hover
+  transition: transform 0.3s ease-in-out;
+}
+
+.step-nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-width: 200px; /* Ensures both buttons have the same width */
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: $caramel;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    background-color: darken($caramel-light, 10%);
+    transform: scale(1.05);
+    color: $midnight-blue;
+  }
+}
+
+.step-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.step-nav-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
