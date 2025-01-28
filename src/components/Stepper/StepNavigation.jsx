@@ -18,6 +18,9 @@ export default function StepNavigation({
   onNext,
   onPrevious,
 }) {
+  console.log("Current Step:", current);
+  console.log("Steps Length:", stepsLength);
+
   return (
     <div className="d-flex justify-content-between mt-6 w-100">
       {/* Render "previous" button if not on the first step */}
@@ -25,14 +28,15 @@ export default function StepNavigation({
         <button
           type="button"
           onClick={onPrevious}
-          className="btn position-relative d-inline-flex align-items-center justify-content-center px-4 py-2 border border-warning rounded-pill shadow-sm overflow-hidden"
-          aria-label="Previous Step"
+          className="btn position-relative d-inline-flex align-items-center justify-content-center px-5 py-3 mt-2 w-auto rounded-pill shadow-sm overflow-hidden"
+          style={{ minWidth: "200px", width: "auto" }} // Added custom width constraints
+          aria-label="Previous Step" // Accessibility label
         >
           <span className="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 text-white bg-warning translate-middle-x transition">
             <svg
-              className="bi bi-arrow-left"
-              width="24"
-              height="24"
+              className="bs bs-arrow-left"
+              width="28"
+              height="28"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -43,25 +47,26 @@ export default function StepNavigation({
               />
             </svg>
           </span>
-          <span className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 text-warning transition translate-middle">
+          <span className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 text-warning transition translate-middle fs-5">
             Previous
           </span>
-          <span className="invisible"> Previous </span>
+          <span className="invisible">Previous</span>
         </button>
       )}
       {/* Render "next" button if not on the last step */}
       {current < stepsLength - 1 && (
         <button
           type="button"
-          className="btn position-relative d-inline-flex align-items-center justify-content-center px-4 py-2 border border-warning rounded-pill shadow-sm overflow-hidden"
           onClick={onNext}
-          aria-label="Next Step"
+          className="btn position-relative d-inline-flex align-items-center justify-content-center px-5 py-3 mt-2 w-auto rounded-pill shadow-sm overflow-hidden"
+          style={{ minWidth: "200px", width: "auto" }} // Added custom width constraints
+          aria-label="Next Step" // Accessibility label
         >
           <span className="position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 text-white bg-warning translate-middle-x transition">
             <svg
-              className="bi bi-arrow-right"
-              width="24"
-              height="24"
+              className="bs bs-arrow-right"
+              width="28"
+              height="28"
               fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -72,7 +77,7 @@ export default function StepNavigation({
               />
             </svg>
           </span>
-          <span className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 text-warning transition translate-middle">
+          <span className="position-absolute d-flex align-items-center justify-content-center w-100 h-100 text-warning transition translate-middle fs-5">
             Next
           </span>
           <span className="invisible">Next</span>
