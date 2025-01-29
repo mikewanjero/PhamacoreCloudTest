@@ -16,17 +16,10 @@ $cadet-gray: #9da5b1;
 $cadet-gray-light: #dfe2e8;
 $cadet-gray-dark: #6e7a8a;
 
-$sunflower: #ffc107;
-$sunflower-light: #ffe082;
-
-$misty-rose: #ffe4e1;
-$rosewood: #65000b;
+$eerie-black: #1b1b1b;
 
 $emerald: #50c878;
 $emerald-dark: #2a7a51;
-
-$midnight-blue: #191970;
-$sky-blue-light: #87ceeb;
 
 @keyframes spin {
   0% {
@@ -145,7 +138,7 @@ body {
 
 .btn:hover .bg-warning {
   background-color: color.adjust(
-    $sunflower,
+    $caramel-dark,
     $lightness: -10%
   ); // Make background slightly darker
 }
@@ -173,7 +166,7 @@ body {
   &:hover {
     background-color: color.adjust($caramel-light, $lightness: -10%);
     transform: scale(1.05);
-    color: $midnight-blue;
+    color: $eerie-black;
   }
 }
 
