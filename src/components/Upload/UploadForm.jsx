@@ -58,7 +58,7 @@ const UploadForm = ({ handleChange, fileType }) => {
   };
 
   return (
-    <Container className="bg-caramel-light p-4 rounded shadow-sm">
+    <Container className="bg-light p-4 rounded shadow-sm">
       <Row className="text-center mb-3">
         <Col>
           <p className="text-muted small">
