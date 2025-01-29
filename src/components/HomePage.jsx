@@ -79,7 +79,7 @@ export default function HomePage() {
       {/* Header */}
       <div className="d-flex flex-column align-items-center mb-4">
         <img src={phamacoreLogo} alt="logo" className="w-40 h-40" />
-        <h1 className="display-5 fw-bold" style={{ color: "$caramel" }}>
+        <h1 className="text-caramel display-5 fw-bold">
           phAMACore<sup>™</sup>Cloud
         </h1>
       </div>
