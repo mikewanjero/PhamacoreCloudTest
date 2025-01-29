@@ -223,7 +223,7 @@ const SubscriptionForm = () => {
             />
             <Button
               type="submit"
-              className="btn btn-primary w-100 mt-3"
+              className="btn btn-caramel-dark btn-caramel w-100 mt-3"
               disabled={!isFormValid}
             >
               {loading ? (
