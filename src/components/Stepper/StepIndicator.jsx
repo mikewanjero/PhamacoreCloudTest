@@ -40,7 +40,7 @@ export default function StepIndicator({ steps, current, onStepClick }) {
           </div>
 
           {/* Display step title */}
-          <span className="text-center text-sm mt-2">{item.title}</span>
+          <span className="text-center text-sm fw-bold mt-2">{item.title}</span>
         </div>
       ))}
     </div>
