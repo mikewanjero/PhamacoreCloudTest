@@ -20,7 +20,7 @@ export default function StepContent({
   return (
     <div className="d-flex flex-column align-items-center w-100">
       {/* Display description for current step*/}
-      <div className="text-center text-caramel mb-2">
+      <div className="text-center text-dark mb-2">
         <p>{steps[current].description}</p>
       </div>
 
