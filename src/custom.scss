@@ -50,9 +50,33 @@ body {
 }
 
 .btn-caramel {
-  color: $white-seashell;
-  background-color: $caramel;
-  border-color: $caramel;
+  color: $white-seashell !important;
+  background-color: $caramel !important;
+  border-color: $caramel !important;
+}
+
+.btn-caramel :hover {
+  background-color: $caramel-dark !important;
+}
+
+.btn-caramel-dark {
+  color: $white-seashell !important;
+  background-color: $caramel-dark !important;
+  border-color: $caramel-dark !important;
+}
+
+.btn-caramel-dark :hover {
+  background-color: $caramel !important;
+}
+
+.btn-caramel-light {
+  color: $caramel !important;
+  background-color: $caramel-light !important;
+  border-color: $caramel-light !important;
+}
+
+.btn-caramel-light :hover {
+  background-color: $caramel !important;
 }
 
 .button {
