@@ -15,7 +15,7 @@ const PasswordField = forwardRef(
       <div className="position-relative w-100">
         <input
           type={showPassword ? "text" : "password"}
-          className="form-control border rounded-3 focus:outline-none focus:ring-2 focus:ring-caramel-caramel"
+          className="form-control border rounded-3 focus:outline-none focus:ring-2 focus:ring-caramel-caramel pe-5"
           id={name}
           name={name}
           value={value}
@@ -24,11 +24,14 @@ const PasswordField = forwardRef(
           required
           aria-invalid={!!error}
         />
-        <div>
-          <button type="button" onClick={() => setShowPassword(!showPassword)}>
-            {showPassword ? <BsEyeSlash /> : <BsEye />}
-          </button>
-        </div>
+
+        <button
+          type="button"
+          onClick={() => setShowPassword(!showPassword)}
+          className="btn position-absolute end-0 top-50 translate-middle-y me-2 p-0 border-0 bg-transparent"
+        >
+          {showPassword ? <BsEyeSlash /> : <BsEye />}
+        </button>
       </div>
       {error && <div className="invalid-feedback">{error}</div>}
     </div>
